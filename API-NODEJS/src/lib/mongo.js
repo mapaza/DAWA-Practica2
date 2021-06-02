@@ -29,7 +29,6 @@ class MongoLib {
 
     return MongoLib.connection
   }
-
   async getAll (collection, query) {
     const db = await this.connect()
     return db.collection(collection).find(query).toArray()
@@ -43,7 +42,7 @@ class MongoLib {
 
   async create (collection, data) {
     const db = await this.connect()
-    const result = await db.collection(collection).insertOne(data)
+    const result = await db.collection(collection).insertOne({ ...data })
     return result.insertedId
   }
 
@@ -58,6 +57,22 @@ class MongoLib {
     await db.collection(collection).deleteOne({ _id: ObjectId(id) })
     return id
   }
+
+  async getbynro (collection, nro, query = null) {
+    const db = await this.connect()
+    //console.log(nro)
+    query = query || { nro_cuenta: nro }
+    return db.collection(collection).findOne(query)
+  }
+
+  async getbyid_persona (collection, nro, query = null) {
+    //console.log("in lib: "+nro)
+    const db = await this.connect()
+    //console.log(nro)
+    query = query || { id_persona: nro }
+    return db.collection(collection).find()
+  }
 }
+
 
 export default MongoLib

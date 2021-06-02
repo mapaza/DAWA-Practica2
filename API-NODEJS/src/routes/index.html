@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>DAWA-PRACTICA2</title>
+  </head>
+  <body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-dark bg-dark p-4">
+    <a class="navbar-brand" href="#">
+    <p class="h4"><strong>Cuentas de Ahorro - API</strong></p>
+    </a>
+    </nav>
+    <div class="container" style="margin:20px">
+    <div class="list-group">
+    <a href="http://localhost:3000/api/persons" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><strong>Listar Personas (2 puntos)</strong></h5>
+        <small>GET</small>
+        </div>
+        <p class="mb-1">http://localhost:3000/api/persons</p>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start ">
+        <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><strong>Registrar Entidades o Personas (2 puntos)</strong></h5>
+        <small>POST</small>
+        </div>
+        <p class="mb-1">http://localhost:3000/api/persons</p>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start ">
+        <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><strong>Registrar Cuentas - Cada entidad puede registrar varias cuentas (2 puntos)</strong></h5>
+        <small>POST</small>
+        </div>
+        <p class="mb-1">http://localhost:3000/api/accounts</p>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start ">
+        <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><strong>Abonar y Retirar dinero a Cuenta (2 puntos)</strong></h5>
+        <small>POST</small>
+        </div>
+        <p class="mb-1"><strong>DEPOSITAR:</strong> http://localhost:3000/api/transactions/deposit</p>
+        <p class="mb-1"><strong>RETIRAR:</strong> http://localhost:3000/api/transactions/retire</p>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start ">
+        <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><strong>Transferir Dinero a otra cuenta (3 puntos)</strong></h5>
+        <small>POST</small>
+        </div>
+        <p class="mb-1">http://localhost:3000/api/transactions/transfer</p>
+    </a>
+    <a href="http://localhost:3000/api/transactions/72433151" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><strong>Ver Transacciones por Cuenta (2 puntos)</strong></h5>
+        <small>GET</small>
+        </div>
+        <p class="mb-1">http://localhost:3000/api/transactions/72433151</p>
+    </a>
+    <a href="http://localhost:3000/api/accounts/72433151" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><strong>Obtener Saldo de cada Cuenta según Persona (2 puntos)</strong></h5>
+        <small>GET</small>
+        </div>
+        <p class="mb-1">http://localhost:3000/api/accounts/72433151</p>
+    </a>
+    <a href="http://localhost:3000/api/persons/72433151" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><strong>Obtener saldo Total según Persona (2 puntos)</strong></h5>
+        <small>GET</small>
+        </div>
+        <p class="mb-1">http://localhost:3000/api/persons/72433151</p>
+    </a>
+    <a href="http://localhost:3000/api/persons/" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><strong>Llenar la base de datos con personas, cuentas y aboneles dinero (2 puntos)</strong></h5>
+        <small>GET</small>
+        </div>
+        <p class="mb-1"><strong>PERSONAS:</strong> http://localhost:3000/api/persons</p>
+        <p class="mb-1"><strong>CUENTAS Y DINERO:</strong> http://localhost:3000/api/accounts/72433151</p>
+    </a>
+    </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

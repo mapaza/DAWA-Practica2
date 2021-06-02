@@ -1,0 +1,144 @@
+{
+	"variables": [],
+	"info": {
+		"name": "PRACTICA02",
+		"_postman_id": "48724a6a-b4c6-d034-c64f-1532bf98f0d0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/entidades",
+			"request": {
+				"url": "http://localhost:3000/api/entidades",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"nombre\": \"Mariam Apaza\",\r\n \"tipoDocumento\": \"DNI\",\r\n \"numeroDocumento\": \"72433123\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/cuentas",
+			"request": {
+				"url": "http://localhost:3000/api/cuentas",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"numeroDocumento\":\"72433123\",\n\t\"numeroCuenta\":\"123456789010\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/movimientos/deposito",
+			"request": {
+				"url": "http://localhost:3000/api/movimientos/deposito",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"numeroDocumento\": \"88888888\",\r\n \"numeroCuenta\": \"215-00000001\",\r\n \"importe\": 100\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/movimientos/retiro",
+			"request": {
+				"url": "http://localhost:3000/api/movimientos/retiro",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"numeroDocumento\": \"88888888\",\r\n \"numeroCuenta\": \"215-00000001\",\r\n \"importe\": 100\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/movimientos/transferencia",
+			"request": {
+				"url": "http://localhost:3000/api/movimientos/transferencia",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"numeroDocumento\": \"88888888\",\r\n \"numeroCuentaOrigen\": \"215-00000001\",\r\n \"numeroCuentaDestino\": \"215-00000002\",\r\n \"importe\": 1100\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/movimientos/88888888",
+			"request": {
+				"url": "http://localhost:3000/api/movimientos/88888888",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/cuentas/88888888",
+			"request": {
+				"url": "http://localhost:3000/api/cuentas/88888888",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/entidad/88888888",
+			"request": {
+				"url": "http://localhost:3000/api/entidad/88888888",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

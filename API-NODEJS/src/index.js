@@ -1,5 +1,5 @@
 import express from 'express'
-import personsRouter from './routes/persons'
+import personsRouter from './routes/routes'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import errorHandler from './utils/middlewares/errorHandlers'

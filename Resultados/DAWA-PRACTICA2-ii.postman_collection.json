@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "bdbd1ed9-dbff-42e8-b07b-7ff3503a0114",
+		"name": "DAWA-PRACTICA2-ii",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Persons",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"nombre\":\"Mariana Gutierrez Cardenas\",\r\n    \"dni\":\"40542140\",\r\n    \"telefono\":\"989547845\",\r\n    \"email\":\"mgutierrez@test.com\",\r\n    \"direccion\":\"Av.Roma 310\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Accounts - Crear Cuenta 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"dni\":\"40542140\",\r\n    \"nro_cuenta\":\"1234567890\",\r\n    \"saldo\":\"0.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Accounts - Crear Cuenta 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"dni\":\"40542140\",\r\n    \"nro_cuenta\":\"1234567891\",\r\n    \"saldo\":\"0.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Deposite",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"dni\":\"40542140\",\r\n    \"nro_cuenta\":\"1234567891\",\r\n    \"cantidad\":\"1000\",\r\n    \"description\":\"Deposito Mayo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/transactions/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"transactions",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Retire",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"dni\":\"40542140\",\r\n    \"nro_cuenta\":\"1234567891\",\r\n    \"description\":\"Compra Semana\",\r\n    \"cantidad\":\"200\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/transactions/retire",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"transactions",
+						"retire"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"dni\":\"40542140\",\r\n    \"nro_cuenta_origen\":\"1234567891\",\r\n    \"nro_cuenta_destino\":\"1234567890\",\r\n    \"cantidad\":\"90\",\r\n    \"description\":\"Transferencia Pago Curso\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/transactions/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"transactions",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Transfer - No hay Saldo Suficiente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"dni\":\"40542140\",\r\n    \"nro_cuenta_origen\":\"1234567891\",\r\n    \"nro_cuenta_destino\":\"1234567890\",\r\n    \"cantidad\":\"190000\",\r\n    \"description\":\"Transferencia Pago Curso\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/transactions/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"transactions",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Transfer - No pertenecen a la misma persona",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"dni\":\"40542140\",\r\n    \"nro_cuenta_origen\":\"1234567891\",\r\n    \"nro_cuenta_destino\":\"2234567869\",\r\n    \"cantidad\":\"20\",\r\n    \"description\":\"Transferencia Invalida\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/transactions/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"transactions",
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
